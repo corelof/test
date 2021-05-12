@@ -36,4 +36,6 @@ func main() {
 	for i := 0; i < 5; i++ {
 		geos[i].Stop()
 	}
+	cli.Stop()
+	broker.Stop()
 }

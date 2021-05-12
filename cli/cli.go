@@ -96,7 +96,11 @@ func (cs *CliService) getNearestTo(x, y int) {
 			}
 		}
 	}
-	log.Printf("Nearest service is %s, distance is %v", nearestName, nearestDist)
+	if nearestName != "" {
+		log.Printf("Nearest service is %s, distance is %v", nearestName, nearestDist)
+	} else {
+		log.Printf("No geo services found")
+	}
 }
 
 func (cs *CliService) stdinHandler() {
